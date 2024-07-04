@@ -1,0 +1,45 @@
+/* Label styling */
+label {
+    font-weight: bold;
+}
+
+/* Content divs for better spacing */
+div {
+    margin-bottom: 10px;
+}
+
+/* Styling for links */
+a {
+    color: white; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #D1E8E2; /* Green color */
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #A3C4BC; /* Darker green color */
+}
+
+/* Button styles */
+input[type="submit"], .dark-mode-toggle {
+    color: white;
+    background-color: #6A0572; /* Darker purple color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, .dark-mode-toggle:hover {
+    background-color: #52004A; /* Even darker purple color */
+}
+
+/* Action buttons container */
+.actions {
+    display: flex;
+    gap: 10px;
+}

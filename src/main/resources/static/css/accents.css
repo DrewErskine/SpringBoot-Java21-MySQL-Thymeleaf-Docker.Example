@@ -1,0 +1,5 @@
+/* Action buttons container */
+.actions {
+    display: flex;
+    gap: 10px;
+}

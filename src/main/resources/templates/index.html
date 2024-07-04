@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management System</title>
+    <link rel="stylesheet" th:href="@{/css/background.css}">
+    <link rel="stylesheet" th:href="@{/css/accessories.css}">
+    <link rel="stylesheet" th:href="@{/css/accents.css}">
+    <link id="darkModeCss" rel="stylesheet" href="" disabled>
+    <script>
+        function toggleDarkMode() {
+            var darkModeCss = document.getElementById('darkModeCss');
+            if (darkModeCss.disabled) {
+                darkModeCss.href = '/css/darkmode.css';
+                darkModeCss.disabled = false;
+            } else {
+                darkModeCss.href = '';
+                darkModeCss.disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2 class="title">Peep Peas'</h2>
+            <h1 class="title" style="padding-top: 50px;">Book Management System</h1>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </header>
+    <main>
+        <h2>Welcome to the Book Management System</h2>
+        <div class="actions">
+            <a th:href="@{/books}">View All Books</a>
+            <a th:href="@{/books/add}">Add New Book</a>
+        </div>
+    </main>
+</body>
+</html>
