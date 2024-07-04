@@ -1,89 +1,108 @@
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background color */
+    color: #333; /* Dark charcoal text color */
+    font-family: 'Arial', sans-serif; /* Arial font with sans-serif as fallback */
+    margin: 0; /* Removes default margin */
+    padding: 1.8em; /* Padding around the content */
 }
 
 /* Header styles */
 header {
-    background-color: #D1E8E2; /* Green color */
-    color: #333;
-    padding: 1em 0;
+    background-color: #D1E8E2; /* Pale aqua background color */
+    color: #333; /* Dark charcoal text color */
+    padding: 1em 0; /* 1em vertical padding, no horizontal padding */
 }
 
+/* Styles for flex container in header */
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Distribute space between items */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 50em; /* Max width of 50em */
+    width: 100%L;
 }
 
-h1 {
-    margin: 0;
+/* Heading styles */
+h1, h2 {
+    margin: 0; /* Removes default margin */
+    color: #333; /* Dark charcoal color for text */
 }
 
-h2 {
-    color: #333;
-}
-
+/* Specific styles for title in header */
 h2.title {
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
-    font-size: 2em; /* Make the title bigger */
+    flex-grow: 1; /* Allows the title to grow to fill space */
+    text-align: left; /* Aligns text to the left */
+    font-size: 2em; /* Increases font size to 2em */
 }
 
-/* Main content styles */
+/* Welcome message styling */
+h2.welcome {
+    font-size: 3em; /* Larger font size for welcome message */
+    font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
+}
+
+/* Main content area */
 main {
-    padding: 20px;
-    text-align: center; /* Center the welcome message */
+    padding: 1.8em; /* Padding around the main content */
+    text-align: center; /* Center-aligns text */
 }
 
-/* Table styles */
+/* Table styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-table, th, td {
-    border: 1px solid;
+    width: 100%; /* Full width */
+    margin-top: 1.8em; /* Margin on top */
+    background-color: #fff; /* White background */
+    border-collapse: collapse; /* Collapses table borders */
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 th, td {
-    padding: 12px;
-    text-align: left;
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
 }
 
 th {
-    background-color: #83ddc5;
-    color: #333;
+    background-color: #30b0b4; /* Custom light teal background */
+    color: #333; /* Dark charcoal text */
 }
 
+/* Row styling */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Light gray for even rows */
 }
 
 tr:hover {
-    background-color: #A3C4BC;
+    background-color: #A3C4BC; /* Lighter teal on hover */
 }
 
-/* Dark mode toggle button styles */
+/* Link styling */
+a {
+    color: white; /* White text */
+    background-color: #195f7a; /* Custom blue */
+    text-decoration: none; /* No underline */
+    padding: 0.5em 1em; /* Padding around text */
+    border-radius: 0.5em; /* Rounded corners */
+    display: inline-block; /* Allows margins to be applied */
+    margin-right: 0.5em; /* Space after link */
+}
+
+a:hover {
+    background-color: #82cfbc; /* Lighter shade on hover */
+}
+
+/* Toggle button for dark mode */
 .dark-mode-toggle {
-    padding: 10px 20px;
-    background-color: #6A0572; /* Darker purple */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #383a49; /* Dark gray background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the button */
+    border: none; /* No border */
+    border-radius: 0.5em; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .dark-mode-toggle:hover {
-    background-color: #52004A; /* Even darker purple */
+    background-color: #6e5064; /* Dark pink on hover */
 }

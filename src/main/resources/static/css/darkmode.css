@@ -1,59 +1,55 @@
-/* General body styles for dark mode */
-body {
-    background-color: #121212;
-    color: #ffffff;
+/* General Element Styling */
+
+/* Label Styling: Makes labels bold */
+label {
+    font-weight: bold; /* Sets font weight to bold */
 }
 
-/* Header styles for dark mode */
-header {
-    background-color: #333333;
-    color: #ffffff;
+/* Content Div Styling: Adds spacing below each div for better layout */
+div {
+    margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
 }
 
-/* Main content styles for dark mode */
-main {
-    padding: 20px;
-}
-
-/* Table styles for dark mode */
-table {
-    background-color: #333333;
-    color: #ffffff;
-    border-color: #555555;
-}
-
-th, td {
-    border-color: #555555;
-}
-
-th {
-    background-color: #444444;
-}
-
-tr:nth-child(even) {
-    background-color: #2c2c2c;
-}
-
-tr:hover {
-    background-color: #3c3c3c;
-}
-
-/* Styling for links */
+/* Link Styling: Customizes the appearance of anchor tags */
 a {
-    color: #ffffff;
-    background-color: #666666;
+    color: white; /* Sets text color to white */
+    background-color: #83a59c; /* Sets background color to a soft teal */
+    border-radius: 0.75em; /* Rounds the corners of the link, 12px */
+    padding: 0.625em 1.25em; /* Adds padding around the link text, 10px 20px */
+    margin-right: 0.625em; /* Adds a margin to the right of the link, 10px */
+    margin-left: 0.625em; /* Adds a margin to the left of the link, 10px */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows the link to accept margin and padding */
 }
 
+/* Hover State Styling */
+
+/* Hover State for Links: Changes background color on mouse-over */
 a:hover {
-    background-color: #555555;
+    background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
 }
 
-/* Button styles */
-input[type="submit"] {
-    color: #ffffff;
-    background-color: #666666;
+/* Button Styling: Styles for submit buttons and dark mode toggles */
+input[type="submit"], .dark-mode-toggle {
+    color: white; /* Sets text color to white */
+    background-color: #2e4e5a; /* Sets background color to a dark slate */
+    border-radius: 0.3125em; /* Rounds the corners of the button, 5px */
+    padding: 0.625em 1.25em; /* Adds padding around the button, 10px 20px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    margin-top: 0.625em; /* Adds a top margin to the button, 10px */
+    border: none; /* Removes the border */
 }
 
-input[type="submit"]:hover {
-    background-color: #555555;
+/* Hover State for Buttons: Changes background color on mouse-over */
+input[type="submit"]:hover, .dark-mode-toggle:hover {
+    background-color: #6e5064; /* Changes background color to a muted purple on hover */
+}
+
+/* Container Styling */
+
+/* Action Buttons Container: Styles the container that holds action buttons */
+.actions {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers the flex items horizontally */
+    gap: 0.625em; /* Sets a gap of 10px between each child element */
 }
