@@ -1,55 +1,51 @@
 /* General Element Styling */
 
-/* Label Styling: Makes labels bold */
+/* Label Styling: Applies bold font weight for better visibility */
 label {
-    font-weight: bold; /* Sets font weight to bold */
+    font-weight: bold;
 }
 
-/* Content Div Styling: Adds spacing below each div for better layout */
+/* Content Div Styling: Adds vertical spacing for better separation and layout */
 div {
-    margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
+    margin-bottom: 0.625em;
 }
 
-/* Link Styling: Customizes the appearance of anchor tags */
+/* Link Styling: Enhances link visibility and interaction */
 a {
-    color: white; /* Sets text color to white */
-    background-color: #83a59c; /* Sets background color to a soft teal */
-    border-radius: 0.75em; /* Rounds the corners of the link, 12px */
-    padding: 0.625em 1.25em; /* Adds padding around the link text, 10px 20px */
-    margin-right: 0.625em; /* Adds a margin to the right of the link, 10px */
-    margin-left: 0.625em; /* Adds a margin to the left of the link, 10px */
-    text-decoration: none; /* Removes underline from links */
-    display: inline-block; /* Allows the link to accept margin and padding */
+    color: white; /* Ensures high contrast for readability */
+    background-color: #83a59c; /* Soft teal for aesthetic appeal */
+    border-radius: 0.75em; /* Smooths corners for a friendly interface */
+    padding: 0.625em 1.25em; /* Balanced padding for clickable area */
+    margin-right: 0.625em; /* Right margin for spacing between inline elements */
+    margin-left: 0.625em; /* Left margin to maintain uniformity */
+    text-decoration: none; /* Removes underline to clean up appearance */
+    display: inline-block; /* Enables block level properties */
 }
 
-/* Hover State Styling */
-
-/* Hover State for Links: Changes background color on mouse-over */
+/* Hover State Styling for Links: Introduces a visual change on mouse-over */
 a:hover {
-    background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
+    background-color: #A3C4BC; /* Lighter teal to indicate hover state */
 }
 
-/* Button Styling: Styles for submit buttons and dark mode toggles */
+/* Button Styling: Unified design for all interactive buttons */
 input[type="submit"], .dark-mode-toggle {
-    color: white; /* Sets text color to white */
-    background-color: #2e4e5a; /* Sets background color to a dark slate */
-    border-radius: 0.3125em; /* Rounds the corners of the button, 5px */
-    padding: 0.625em 1.25em; /* Adds padding around the button, 10px 20px */
-    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-    margin-top: 0.625em; /* Adds a top margin to the button, 10px */
-    border: none; /* Removes the border */
+    color: white; /* Maintains readability */
+    background-color: #2e4e5a; /* Dark slate for depth and focus */
+    border-radius: 0.3125em; /* Subtly rounded edges for ergonomic feel */
+    padding: 0.625em 1.25em; /* Ample padding for easy interaction */
+    cursor: pointer; /* Indicates an interactive element */
+    margin-top: 0.625em; /* Spacing above for visual separation */
+    border: none; /* Clean borderless design */
 }
 
-/* Hover State for Buttons: Changes background color on mouse-over */
+/* Hover State for Buttons: Provides feedback with a color change on hover */
 input[type="submit"]:hover, .dark-mode-toggle:hover {
-    background-color: #6e5064; /* Changes background color to a muted purple on hover */
+    background-color: #6e5064; /* Muted purple for a noticeable hover effect */
 }
 
-/* Container Styling */
-
-/* Action Buttons Container: Styles the container that holds action buttons */
+/* Action Buttons Container: Layout adjustments for better alignment and spacing */
 .actions {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: center; /* Centers the flex items horizontally */
-    gap: 0.625em; /* Sets a gap of 10px between each child element */
+    display: flex; /* Flexbox for responsive alignment */
+    justify-content: center; /* Horizontally centers content for focus */
+    gap: 0.625em; /* Consistent spacing between action elements */
 }

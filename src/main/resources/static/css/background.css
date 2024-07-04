@@ -21,7 +21,7 @@ header {
     justify-content: space-between; /* Distribute space between items */
     margin: 0 auto; /* Center horizontally */
     max-width: 50em; /* Max width of 50em */
-    width: 100%L;
+    width: 100%;
 }
 
 /* Heading styles */
@@ -60,7 +60,7 @@ table {
 
 th, td {
     border: 1px solid #ddd; /* Light gray border */
-    padding: 12px; /* Padding inside cells */
+    padding: 0.75em; /* Adjusted padding in em */
     text-align: left; /* Align text to the left */
 }
 
@@ -97,7 +97,7 @@ a:hover {
 .dark-mode-toggle {
     background-color: #383a49; /* Dark gray background */
     color: white; /* White text */
-    padding: 10px 20px; /* Padding around the button */
+    padding: 0.625em 1.25em; /* Adjusted padding */
     border: none; /* No border */
     border-radius: 0.5em; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
