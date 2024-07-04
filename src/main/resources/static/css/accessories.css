@@ -1,52 +1,46 @@
 /* General Element Styling */
 
-/* Labels: Bold font for better readability */
+/* Label Styling: Makes labels bold */
 label {
-    font-weight: bold;
+    font-weight: bold; /* Sets font weight to bold */
 }
 
-/* Content Divisions: Adds space below each to improve layout */
+/* Content Div Styling: Adds spacing below each div for better layout */
 div {
-    margin-bottom: 0.625em;
+    margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
 }
 
-/* Anchor Tags: Styling for better visibility and interaction */
+/* Link Styling: Customizes the appearance of anchor tags */
 a {
-    color: white;
-    background-color: #83a59c; /* Soft teal background */
-    border-radius: 0.75em; /* Rounded corners for aesthetic */
-    padding: 0.625em 1.25em; /* Uniform padding */
-    margin-right: 0.625em; /* Space between inline elements */
-    margin-left: 0.625em;
-    text-decoration: none;
-    display: inline-block;
+    color: white; /* Sets text color to white */
+    background-color: #83a59c; /* Sets background color to a soft teal */
+    border-radius: 0.75em; /* Rounds the corners of the link, 12px */
+    padding: 0.625em 1.25em; /* Adds padding around the link text, 10px 20px */
+    margin-right: 0.625em; /* Adds a margin to the right of the link, 10px */
+    margin-left: 0.625em; /* Adds a margin to the left of the link, 10px */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows the link to accept margin and padding */
 }
 
-/* Hover State for Links: Enhances user interaction */
+/* Hover State Styling */
+
+/* Hover State for Links: Changes background color on mouse-over */
 a:hover {
-    background-color: #A3C4BC; /* Lighter teal on hover */
+    background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
 }
 
-/* Button Styling: Unified look for all buttons */
+/* Button Styling: Styles for submit buttons and dark mode toggles */
 input[type="submit"], .dark-mode-toggle {
-    color: white;
-    background-color: #2e4e5a; /* Dark slate background */
-    border-radius: 0.3125em; /* Slightly rounded corners */
-    padding: 0.625em 1.25em; /* Comfortable click area */
-    cursor: pointer;
-    margin-top: 3em; /* Additional space from top */
-    margin-right: 6em; /* Additional space from right */
-    border: none;
+    color: white; /* Sets text color to white */
+    background-color: #2e4e5a; /* Sets background color to a dark slate */
+    border-radius: 0.3125em; /* Rounds the corners of the button, 5px */
+    padding: 0.625em 1.25em; /* Adds padding around the button, 10px 20px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    margin-top: 0.625em; /* Adds a top margin to the button, 10px */
+    border: none; /* Removes the border */
 }
 
-/* Hover State for Buttons: Visual feedback on interaction */
+/* Hover State for Buttons: Changes background color on mouse-over */
 input[type="submit"]:hover, .dark-mode-toggle:hover {
-    background-color: #6e5064; /* Muted purple on hover */
-}
-
-/* Action Buttons Container: Flexbox for alignment and spacing */
-.actions {
-    display: flex;
-    justify-content: center; /* Horizontally centers items */
-    gap: 0.625em; /* Keeps items spaced out evenly */
+    background-color: #6e5064; /* Changes background color to a muted purple on hover */
 }

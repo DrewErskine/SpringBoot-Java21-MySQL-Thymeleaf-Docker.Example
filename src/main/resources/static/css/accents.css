@@ -1,9 +1,9 @@
 /* Action Buttons Container */
 .actions {
     display: flex; /* Enables flexbox layout which is more efficient for arranging children elements */
-    gap: 0.625em; /* Sets a gap between each child element */
+    gap: 10px; /* Sets a fixed gap of 10px between each child element within the container */
     justify-content: center; /* Centers the action buttons horizontally within the container */
     background-color: #815e64; /* Sets a soft, muted pink background color for the container */
-    padding: 3em; /* Adds padding all around the inside of the container to create space between the content and container edges */
+    padding: 3em; /* 13em of padding all around the inside of the container to create space between the content and container edges */
     opacity: 0.8; /* Sets the opacity of the container to 80%, making it slightly transparent */
 }
