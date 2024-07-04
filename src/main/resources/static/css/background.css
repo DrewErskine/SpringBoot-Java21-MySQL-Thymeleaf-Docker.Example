@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    background-color: #f4f4f4; /* Light gray background color */
+    background-color: #dad5d5; /* Light gray background color */
     color: #333; /* Dark charcoal text color */
     font-family: 'Arial', sans-serif; /* Arial font with sans-serif as fallback */
     margin: 0; /* Removes default margin */
@@ -9,7 +9,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #D1E8E2; /* Pale aqua background color */
+    background-color: #95b5bb; /* Pale aqua background color */
     color: #333; /* Dark charcoal text color */
     padding: 1em 0; /* 1em vertical padding, no horizontal padding */
 }
@@ -21,7 +21,7 @@ header {
     justify-content: space-between; /* Distribute space between items */
     margin: 0 auto; /* Center horizontally */
     max-width: 50em; /* Max width of 50em */
-    width: 100%L;
+    width: 100%;
 }
 
 /* Heading styles */
@@ -34,7 +34,8 @@ h1, h2 {
 h2.title {
     flex-grow: 1; /* Allows the title to grow to fill space */
     text-align: left; /* Aligns text to the left */
-    font-size: 2em; /* Increases font size to 2em */
+    font-size: 2.5em; /* Increase font size to make the title bigger */
+    color: #333; /* Dark charcoal color for text */
 }
 
 /* Welcome message styling */
@@ -80,29 +81,32 @@ tr:hover {
 
 /* Link styling */
 a {
-    color: white; /* White text */
-    background-color: #195f7a; /* Custom blue */
+    padding: 0.625em 1.25em;  /* Consistent padding */
+    margin-right: 0.625em; /* Consistent right margin */
+    margin-left: 0.625em; /* Consistent left margin */
+
+    color: #343c69; 
+    background-color: #95b5bb;
     text-decoration: none; /* No underline */
-    padding: 0.5em 1em; /* Padding around text */
     border-radius: 0.5em; /* Rounded corners */
     display: inline-block; /* Allows margins to be applied */
-    margin-right: 0.5em; /* Space after link */
 }
 
 a:hover {
-    background-color: #82cfbc; /* Lighter shade on hover */
+    background-color: rgb(76, 65, 100);
 }
 
 /* Toggle button for dark mode */
 .dark-mode-toggle {
-    background-color: #383a49; /* Dark gray background */
+    background-color: #8a586b; /* Dark gray background */
     color: white; /* White text */
     padding: 10px 20px; /* Padding around the button */
     border: none; /* No border */
     border-radius: 0.5em; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    box-sizing: border-box; /* Ensure consistent box-sizing */
 }
 
 .dark-mode-toggle:hover {
-    background-color: #6e5064; /* Dark pink on hover */
+    background-color: #b685a78a; /* Dark pink on hover */
 }

@@ -14,11 +14,9 @@
             if (darkModeCss.disabled) {
                 darkModeCss.href = '/css/darkmode.css';
                 darkModeCss.disabled = false;
-                localStorage.setItem('darkMode', 'enabled');
             } else {
                 darkModeCss.href = '';
                 darkModeCss.disabled = true;
-                localStorage.setItem('darkMode', 'disabled');
             }
         }
 
@@ -34,7 +32,7 @@
 <body>
     <header>
         <div class="header-content">
-            <h2 class="title">Peep Peas' - Book Management System</h2>
+            <h2 class="title">Peep Peas' <br> Book Management System</h2>
             <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
     </header>

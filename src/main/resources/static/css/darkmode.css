@@ -1,55 +1,61 @@
-/* General Element Styling */
+/* General Element Styling for Dark Mode */
 
-/* Label Styling: Makes labels bold */
-label {
-    font-weight: bold; /* Sets font weight to bold */
+body {
+    background-color: #333; /* Ensure dark mode has a uniform dark background */
+    color: #ffffff;
 }
 
-/* Content Div Styling: Adds spacing below each div for better layout */
-div {
-    margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
+header {
+    background-color: #263238; /* Dark blue-grey for a uniform look */
+    color: #FFFFFF; /* White for better contrast and visibility */
 }
 
-/* Link Styling: Customizes the appearance of anchor tags */
+header a, .dark-mode-toggle {
+    color: #BBDEFB; /* Light blue text color for links */
+    background-color: transparent; /* Ensures links don't have a distinct background */
+}
+
+/* Dark Mode Styles for Specific Headers */
+
+/* Styles for the main header title in dark mode */
+h2.title {
+    font-size: 2.5em; /* Ensure the font size matches the light mode for consistency */
+    color: #FAF0E6; /* Pastel off-white color */
+}
+
+/* Styles for the welcome message in dark mode */
+h2.welcome {
+    color: #F5F5F5; /* Consistent off white color for introductory text */
+}
+
+/* Enhanced link styles for better visibility in dark mode */
 a {
-    color: white; /* Sets text color to white */
-    background-color: #83a59c; /* Sets background color to a soft teal */
-    border-radius: 0.75em; /* Rounds the corners of the link, 12px */
-    padding: 0.625em 1.25em; /* Adds padding around the link text, 10px 20px */
-    margin-right: 0.625em; /* Adds a margin to the right of the link, 10px */
-    margin-left: 0.625em; /* Adds a margin to the left of the link, 10px */
-    text-decoration: none; /* Removes underline from links */
-    display: inline-block; /* Allows the link to accept margin and padding */
+    background-color: #503986; /* Light blue, ensuring visibility against the dark background */
+    background-color: #85acaf; /* Dark slate background for links */
+    border-radius: 0.5em; /* Ensures rounded corners for all links */
 }
 
-/* Hover State Styling */
-
-/* Hover State for Links: Changes background color on mouse-over */
 a:hover {
-    background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
+    background-color: #7d7997; /* Lighter on hover for visual feedback */
 }
 
-/* Button Styling: Styles for submit buttons and dark mode toggles */
+/* Button Styling: Ensures buttons are clearly visible */
 input[type="submit"], .dark-mode-toggle {
-    color: white; /* Sets text color to white */
-    background-color: #2e4e5a; /* Sets background color to a dark slate */
-    border-radius: 0.3125em; /* Rounds the corners of the button, 5px */
-    padding: 0.625em 1.25em; /* Adds padding around the button, 10px 20px */
-    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-    margin-top: 0.625em; /* Adds a top margin to the button, 10px */
-    border: none; /* Removes the border */
+    color: white;
+    background-color: #344955; /* Dark blue-grey, different from link background */
+    border-radius: 5px; /* Consistent border radius with background.css */
+    padding: 10px 20px; /* Consistent padding */
+    cursor: pointer;
+    border: none; /* Ensuring buttons have no border */
+    box-sizing: border-box; /* Ensure consistent box-sizing */
 }
 
-/* Hover State for Buttons: Changes background color on mouse-over */
 input[type="submit"]:hover, .dark-mode-toggle:hover {
-    background-color: #6e5064; /* Changes background color to a muted purple on hover */
+    background-color: #4A6274; /* Slightly lighter on hover */
 }
 
-/* Container Styling */
-
-/* Action Buttons Container: Styles the container that holds action buttons */
+/* Action Buttons Container */
 .actions {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: center; /* Centers the flex items horizontally */
-    gap: 0.625em; /* Sets a gap of 10px between each child element */
+    background-color: #424242; /* Darker background for action container */
+    opacity: 1; /* Remove opacity to ensure text and elements are fully readable */
 }
