@@ -2,9 +2,28 @@ services:
   mysql:
     image: 'mysql:latest'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - MYSQL_DATABASE=springboot3mysqldockerexample
+      - MYSQL_ROOT_PASSWORD=Devindrew42!
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Devindrew42!
     ports:
-      - '3306'
+      - '3306:3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - spring-net
+
+  springboot-app:
+    build: .
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mysql
+    networks:
+      - spring-net
+
+networks:
+  spring-net:
+
+volumes:
+  mysql-data:

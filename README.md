@@ -21,3 +21,5 @@
 - `findAll()`: Retrieves all books.
 - `findById(Long id)`: Finds a book by ID.
 - `save(Book book)`: Saves a book.
+
+---

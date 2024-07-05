@@ -1,11 +1,14 @@
-# Use OpenJDK 21 slim for smaller image size
-FROM openjdk:21-jdk-slim
+# Use Amazon Corretto as the base image
+FROM amazoncorretto:21
 
-# Argument to specify build artifact
-ARG JAR_FILE=target/*.jar
+# Set the working directory in the Docker container
+WORKDIR /app
 
-# Copy the jar file to the container
-COPY ${JAR_FILE} app.jar
+# Copy the JAR file from your target directory to the Docker container
+COPY ./target/docker-3.3.3.jar /app/springboot-app.jar
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+# Expose the port that your Spring Boot application uses
+EXPOSE 8080
+
+# Command to run your Spring Boot application
+CMD ["java", "-jar", "springboot-app.jar"]

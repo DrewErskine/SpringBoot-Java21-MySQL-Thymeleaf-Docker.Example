@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>peep.pea</groupId>
 	<artifactId>docker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>3.3.3</version>
 	<name>docker</name>
 	<description>This is a example project to show a working java 21, springboot 3, mysql, thymeleaf web-application on docker.</description>
 	<url/>
