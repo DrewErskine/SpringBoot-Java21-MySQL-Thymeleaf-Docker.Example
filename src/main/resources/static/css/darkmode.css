@@ -5,19 +5,19 @@ body {
     color: #C4C3D0; /* Lavender gray for better contrast */
 }
 
+/* Header styles for dark mode */
 header {
     background-color: #263238; /* Dark blue-grey for a uniform look */
-    color: #4e5963; /* White for better contrast and visibility */
+    color: #4e5963; /* Dark grey for better contrast and visibility */
     padding: 1em 0; /* 1em vertical padding, no horizontal padding */
     border-bottom: 2px solid #806a74; /* Add a border to the bottom of the header */
 }
 
+/* Link styles in the header and dark mode toggle button */
 header a, .dark-mode-toggle {
     color: #BBDEFB; /* Light blue text color for links */
     background-color: transparent; /* Ensures links don't have a distinct background */
 }
-
-/* Dark Mode Styles for Specific Headers */
 
 /* Styles for the main header title in dark mode */
 h2.title {
@@ -31,21 +31,20 @@ h2.title {
     -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
 }
 
-
 /* Styles for the welcome message in dark mode */
 h2.welcome {
     font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
     font-size: 2.2em; /* Ensure the font size matches the light mode for consistency */
-    color: #af9880; /* Consistent off white color for introductory text */
+    color: #af9880; /* Off white color for introductory text */
     text-shadow: 0px 1px 2px #333; /* Add a more pronounced text shadow */
-    font-weight: 400;
+    font-weight: 400; /* Normal weight text */
 }
 
 /* Enhanced link styles for better visibility in dark mode */
 a {
-    color: #e7dcd0; /* Light blue, ensuring visibility against the dark background */
+    color: #e7dcd0; /* Light beige, ensuring visibility against the dark background */
     background-color: #455A64; /* Dark slate background for links */
-    font-weight: 700;
+    font-weight: 700; /* Make the text bold */
 
     padding: 0.625em 1.25em;  /* Consistent padding */
     margin-right: 0.625em; /* Consistent right margin */
@@ -53,7 +52,7 @@ a {
 
     text-decoration: none; /* No underline */
     display: inline-block; /* Allows margins to be applied */
-    border: .2em solid #806a74; /* Add a border to links */
+    border: 0.2em solid #806a74; /* Add a border to links */
     border-radius: 0.3em; /* Ensures rounded corners for all links */
 }
 
@@ -64,7 +63,7 @@ a:hover {
 
 /* Button Styling: Ensures buttons are clearly visible */
 input[type="submit"], .dark-mode-toggle {
-    color: #C4C3D0;
+    color: #C4C3D0; /* Lavender gray text color */
     background-color: #344955; /* Dark blue-grey, different from link background */
 
     border-radius: 5px; /* Consistent border radius with background.css */
@@ -72,7 +71,7 @@ input[type="submit"], .dark-mode-toggle {
     box-sizing: border-box; /* Ensure consistent box-sizing */
     padding: 10px 20px; /* Consistent padding */
 
-    cursor: pointer;
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 input[type="submit"]:hover, .dark-mode-toggle:hover {
@@ -84,6 +83,6 @@ input[type="submit"]:hover, .dark-mode-toggle:hover {
 .actions {
     background-color: #424242; /* Darker background for action container */
     opacity: 1; /* Remove opacity to ensure text and elements are fully readable */
-    border: .3em solid #806a74; /* Add a border to the action buttons container */
+    border: 0.3em solid #806a74; /* Add a border to the action buttons container */
     border-radius: 0.5em; /* Ensure rounded corners for the container */
 }
