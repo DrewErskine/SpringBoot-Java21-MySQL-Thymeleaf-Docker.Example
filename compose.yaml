@@ -13,7 +13,7 @@ services:
       - db_data:/var/lib/mysql
       - ./src/main/resources:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"  # Consider removing this in production
+      - "3306:3306"
 
   books-app:
     image: peeppea.books-image
@@ -21,9 +21,10 @@ services:
     depends_on:
       - books-db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://peeppea.books-db:3306/peeppea_booksDB
-      SPRING_DATASOURCE_USERNAME: drew
-      SPRING_DATASOURCE_PASSWORD: peeppea33
+      DB_HOST: peeppea.books-db
+      DB_NAME: peeppea_booksDB
+      DB_USERNAME: drew
+      DB_PASSWORD: peeppea33
     ports:
       - "8080:8080"
 
