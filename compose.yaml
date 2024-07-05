@@ -1,30 +1,33 @@
 version: '3.8'
+
 services:
-  mysql:
-    image: 'mysql:latest'
+  database:
+    image: mysql:8.0.37
+    container_name: peeppea.books-db
     environment:
-      - MYSQL_DATABASE=springboot3mysqldockerexample
-      - MYSQL_ROOT_PASSWORD=Devindrew42!
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=Devindrew42!
-    ports:
-      - '3306:3306'
+      MYSQL_ROOT_PASSWORD: Devindrew42!
+      MYSQL_DATABASE: peepea_booksDB
+      MYSQL_USER: drew
+      MYSQL_PASSWORD: peeppea33
     volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - spring-net
-
-  springboot-app:
-    build: .
+      - db_data:/var/lib/mysql
+      - ./src/main/resources:/docker-entrypoint-initdb.d
     ports:
-      - '8080:8080'
-    depends_on:
-      - mysql
-    networks:
-      - spring-net
+      - "3306:3306"
 
-networks:
-  spring-net:
+  app:
+    image: peeppea.books-image
+    container_name: peeppea.books-container
+    depends_on:
+      - database
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/peepea_booksDB
+      SPRING_DATASOURCE_USERNAME: drew
+      SPRING_DATASOURCE_PASSWORD: peeppea33
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/app
 
 volumes:
-  mysql-data:
+  db_data:
