@@ -1,4 +1,4 @@
-# Project Files and Methods Overview
+# Java
 
 ## BookController.java Methods
 - `setBookRepository(BookRepository bookRepository)`: Sets the book repository.
@@ -21,3 +21,16 @@
 - `findAll()`: Retrieves all books.
 - `findById(Long id)`: Finds a book by ID.
 - `save(Book book)`: Saves a book.
+
+
+---
+
+# CSS
+
+## accents.css
+
+## accessories.css
+
+## background.css
+
+## darkmode.css
