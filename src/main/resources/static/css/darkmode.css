@@ -2,12 +2,14 @@
 
 body {
     background-color: #333; /* Ensure dark mode has a uniform dark background */
-    color: #ffffff;
+    color: #C4C3D0; /* Lavender gray for better contrast */
 }
 
 header {
     background-color: #263238; /* Dark blue-grey for a uniform look */
-    color: #FFFFFF; /* White for better contrast and visibility */
+    color: #4e5963; /* White for better contrast and visibility */
+    padding: 1em 0; /* 1em vertical padding, no horizontal padding */
+    border-bottom: 2px solid #806a74; /* Add a border to the bottom of the header */
 }
 
 header a, .dark-mode-toggle {
@@ -19,43 +21,69 @@ header a, .dark-mode-toggle {
 
 /* Styles for the main header title in dark mode */
 h2.title {
-    font-size: 2.5em; /* Ensure the font size matches the light mode for consistency */
-    color: #FAF0E6; /* Pastel off-white color */
+    flex-grow: 1; /* Allows the title to grow to fill space */
+    text-align: left; /* Aligns text to the left */
+    font-size: 3em; /* Increase font size to make the title bigger */
+    font-weight: 777; /* Make the text bold */
+    letter-spacing: 0.05em; /* Slightly increase letter spacing */
+    background: linear-gradient(to right, #78b8af, #8280ad); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
 }
+
 
 /* Styles for the welcome message in dark mode */
 h2.welcome {
-    color: #F5F5F5; /* Consistent off white color for introductory text */
+    font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
+    font-size: 2.2em; /* Ensure the font size matches the light mode for consistency */
+    color: #af9880; /* Consistent off white color for introductory text */
+    text-shadow: 0px 1px 2px #333; /* Add a more pronounced text shadow */
+    font-weight: 420;
 }
 
 /* Enhanced link styles for better visibility in dark mode */
 a {
-    background-color: #503986; /* Light blue, ensuring visibility against the dark background */
-    background-color: #85acaf; /* Dark slate background for links */
-    border-radius: 0.5em; /* Ensures rounded corners for all links */
+    color: #e7dcd0; /* Light blue, ensuring visibility against the dark background */
+    background-color: #455A64; /* Dark slate background for links */
+    font-weight: 777;
+
+    padding: 0.625em 1.25em;  /* Consistent padding */
+    margin-right: 0.625em; /* Consistent right margin */
+    margin-left: 0.625em; /* Consistent left margin */
+
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Allows margins to be applied */
+    border: .2em solid #806a74; /* Add a border to links */
+    border-radius: 0.3em; /* Ensures rounded corners for all links */
 }
 
 a:hover {
-    background-color: #7d7997; /* Lighter on hover for visual feedback */
+    background-color: #546E7A; /* Lighter on hover for visual feedback */
+    border-color: #BBDEFB; /* Ensure border color remains the same on hover */
 }
 
 /* Button Styling: Ensures buttons are clearly visible */
 input[type="submit"], .dark-mode-toggle {
-    color: white;
+    color: #C4C3D0;
     background-color: #344955; /* Dark blue-grey, different from link background */
+
     border-radius: 5px; /* Consistent border radius with background.css */
-    padding: 10px 20px; /* Consistent padding */
-    cursor: pointer;
-    border: none; /* Ensuring buttons have no border */
+    border: 2px solid #BBDEFB; /* Add a border to buttons */
     box-sizing: border-box; /* Ensure consistent box-sizing */
+    padding: 10px 20px; /* Consistent padding */
+
+    cursor: pointer;
 }
 
 input[type="submit"]:hover, .dark-mode-toggle:hover {
     background-color: #4A6274; /* Slightly lighter on hover */
+    border-color: #BBDEFB; /* Ensure border color remains the same on hover */
 }
 
 /* Action Buttons Container */
 .actions {
     background-color: #424242; /* Darker background for action container */
     opacity: 1; /* Remove opacity to ensure text and elements are fully readable */
+    border: .3em solid #806a74; /* Add a border to the action buttons container */
+    border-radius: 0.5em; /* Ensure rounded corners for the container */
 }

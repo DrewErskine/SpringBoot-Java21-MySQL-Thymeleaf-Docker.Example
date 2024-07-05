@@ -9,9 +9,10 @@ body {
 
 /* Header styles */
 header {
-    background-color: #95b5bb; /* Pale aqua background color */
+    background-color: #95b5bb; /* Light aqua background color */
     color: #333; /* Dark charcoal text color */
     padding: 1em 0; /* 1em vertical padding, no horizontal padding */
+    border-bottom: 2px solid #fdbaba; /* Add a border to the bottom of the header */
 }
 
 /* Styles for flex container in header */
@@ -30,19 +31,26 @@ h1, h2 {
     color: #333; /* Dark charcoal color for text */
 }
 
-/* Specific styles for title in header */
 h2.title {
     flex-grow: 1; /* Allows the title to grow to fill space */
     text-align: left; /* Aligns text to the left */
-    font-size: 2.5em; /* Increase font size to make the title bigger */
-    color: #333; /* Dark charcoal color for text */
+    font-size: 3em; /* Increase font size to make the title bigger */
+    font-weight: 777; /* Make the text bold */
+    letter-spacing: 0.05em; /* Slightly increase letter spacing */
+    background: linear-gradient(to left, #4b8b6a, #452c6e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
 }
 
-/* Welcome message styling */
+/* Styles for the welcome message in dark mode */
 h2.welcome {
-    font-size: 3em; /* Larger font size for welcome message */
     font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
+    font-size: 2.2em; /* Ensure the font size matches the light mode for consistency */
+    color: #719c86; /* Consistent off white color for introductory text */
+    text-shadow: 1px 1px 2px rgba(2, 59, 42, 0.705);; /* Add a more pronounced text shadow */
+    font-weight: 500;
 }
+
 
 /* Main content area */
 main {
@@ -54,7 +62,7 @@ main {
 table {
     width: 100%; /* Full width */
     margin-top: 1.8em; /* Margin on top */
-    background-color: #fff; /* White background */
+    background-color: rgb(82, 124, 105)989; /* White background */
     border-collapse: collapse; /* Collapses table borders */
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
@@ -81,32 +89,48 @@ tr:hover {
 
 /* Link styling */
 a {
+    color: #343c69; /* Darker text color */
+    background-color: #95b5bb; /* Light aqua background */
+    font-weight: 777;
+
     padding: 0.625em 1.25em;  /* Consistent padding */
     margin-right: 0.625em; /* Consistent right margin */
     margin-left: 0.625em; /* Consistent left margin */
 
-    color: #343c69; 
-    background-color: #95b5bb;
     text-decoration: none; /* No underline */
-    border-radius: 0.5em; /* Rounded corners */
     display: inline-block; /* Allows margins to be applied */
+    border: .2em solid #e49ca8; /* Add a border to links */
+    border-radius: .3em; /* Rounded corners */
 }
 
 a:hover {
-    background-color: rgb(76, 65, 100);
+    background-color: #452c6e; /* Lighter on hover for visual feedback */
+    border-color: #FAF0E6; /* Ensure border color remains the same on hover */
 }
 
 /* Toggle button for dark mode */
 .dark-mode-toggle {
+    color: #C4C3D0; /* Lavender gray text color */
     background-color: #8a586b; /* Dark gray background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding around the button */
-    border: none; /* No border */
+
     border-radius: 0.5em; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid #452c6e;
     box-sizing: border-box; /* Ensure consistent box-sizing */
+    padding: 10px 20px; /* Padding around the button */
+
+
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .dark-mode-toggle:hover {
-    background-color: #b685a78a; /* Dark pink on hover */
+    background-color: #b685a7; /* Dark pink on hover */
+    border: 3px solid #6e2c47; /* Add a border on hover */
+}
+
+/* Action Buttons Container */
+.actions {
+    background-color: #C4C3D0; /* Light background for action container */
+    opacity: 1; /* Ensure text and elements are fully readable */
+    border: .3em solid #683439; /* Add a border to the action buttons container */
+    border-radius: 0.5em; /* Ensure rounded corners for the container */
 }
