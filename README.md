@@ -23,3 +23,13 @@
 - `save(Book book)`: Saves a book.
 
 ---
+
+## Deploy :salute:
+
+### 1. Log in to AWS ECR: ```aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730335561704.dkr.ecr us-east-1.amazonaws.com ```
+
+### 12. Build your Docker image: ```docker build -t peeppeabooks .```
+
+### 13. Tag your Docker image for ECR: ```docker tag peeppeabooks:latest 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest```
+
+### 14. Push your Docker image to ECR: ```docker push 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest```
