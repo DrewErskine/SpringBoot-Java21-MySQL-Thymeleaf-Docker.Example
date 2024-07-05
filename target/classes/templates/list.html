@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books List</title>
+    <link rel="stylesheet" th:href="@{/css/background.css}">
+    <link rel="stylesheet" th:href="@{/css/accessories.css}">
+    <link rel="stylesheet" th:href="@{/css/accents.css}">
+</head>
+<body>
+    <header>
+        <h1>Book Management System</h1>
+    </header>
+    <main>
+        <h2>Books List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="book : ${books}">
+                    <td th:text="${book.id}">1</td>
+                    <td th:text="${book.title}">Book Title</td>
+                    <td th:text="${book.author}">Author Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

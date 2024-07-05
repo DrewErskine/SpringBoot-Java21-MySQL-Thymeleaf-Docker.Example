@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management System</title>
+    <link rel="stylesheet" th:href="@{/css/background.css}">
+    <link rel="stylesheet" th:href="@{/css/accessories.css}">
+    <link rel="stylesheet" th:href="@{/css/accents.css}">
+    <link id="darkModeCss" rel="stylesheet" href="" disabled>
+    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+    <script>
+        function toggleDarkMode() {
+            var darkModeCss = document.getElementById('darkModeCss');
+            if (darkModeCss.disabled) {
+                darkModeCss.href = '/css/darkmode.css';
+                darkModeCss.disabled = false;
+            } else {
+                darkModeCss.href = '';
+                darkModeCss.disabled = true;
+            }
+        }
+
+        // Check local storage for dark mode setting on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.getElementById('darkModeCss').href = '/css/darkmode.css';
+                document.getElementById('darkModeCss').disabled = false;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2 class="title">Peep Peas' <br> Book Management Sys.</h2>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </header>
+    <main>
+        <h2 class="welcome">Welcome to the Book Management System</h2>
+        <div class="actions">
+            <a th:href="@{/books}">View All Books</a>
+            <a th:href="@{/books/add}">Add New Book</a>
+        </div>
+    </main>
+</body>
+</html>
