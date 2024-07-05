@@ -1,27 +1,27 @@
 version: '3.8'
 
 services:
-  database:
+  books-db:
     image: mysql:8.0.37
     container_name: peeppea.books-db
     environment:
       MYSQL_ROOT_PASSWORD: Devindrew42!
-      MYSQL_DATABASE: peepea_booksDB
+      MYSQL_DATABASE: peeppea_booksDB
       MYSQL_USER: drew
       MYSQL_PASSWORD: peeppea33
     volumes:
       - db_data:/var/lib/mysql
       - ./src/main/resources:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "3306:3306"  # Consider removing this in production
 
-  app:
+  books-app:
     image: peeppea.books-image
     container_name: peeppea.books-container
     depends_on:
-      - database
+      - books-db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/peepea_booksDB
+      SPRING_DATASOURCE_URL: jdbc:mysql://peeppea.books-db:3306/peeppea_booksDB
       SPRING_DATASOURCE_USERNAME: drew
       SPRING_DATASOURCE_PASSWORD: peeppea33
     ports:

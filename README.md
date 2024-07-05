@@ -24,12 +24,57 @@
 
 ---
 
-## Deploy :salute:
+## A. Deploy :salute:
 
-### 1. Log in to AWS ECR: ```aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730335561704.dkr.ecr us-east-1.amazonaws.com ```
+### 0. Clone the Repository: 
+```git clone <https://github.com/DrewErskine/SpringBoot-Java21-Thymeleaf-Docker.Example>```
+```cd <SpringBoot-Java21-Thymeleaf-Docker.Example>```
 
-### 12. Build your Docker image: ```docker build -t peeppeabooks .```
+### 1: Build the Spring Boot JAR File: ```mvn clean package```
 
-### 13. Tag your Docker image for ECR: ```docker tag peeppeabooks:latest 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest```
+### 2: Build your Docker image: ```docker build -t peeppea.books-image .```
 
-### 14. Push your Docker image to ECR: ```docker push 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest```
+### 3: Run Docker Compose: ```docker-compose up```
+
+## B. Create an ECR Repository - https://console.aws.amazon.com/ecr/home.
+
+### 1: Authenticate Docker to Your Amazon ECR Registry: ```aws ecr get-login-password --region <your_region> | docker login --username AWS --password-stdin <your_account_id>.dkr.ecr.<your_region>.amazonaws.com```
+- ``` aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730335561704.dkr.ecr.us-east-1.amazonaws.com ```
+
+
+### 2: Tag the Docker Image for ECR: ```docker tag peeppea.books-image:latest <your_account_id>.dkr.ecr.<your_region>.amazonaws.com/peeppeabooks:latest```
+- ``` docker tag peeppea.books-image:latest 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest ```
+
+### 3: Push the Docker Image to ECR: ```docker push <your_account_id>.dkr.ecr.<your_region>.amazonaws.com/peeppeabooks:latest```
+- ``` docker push 730335561704.dkr.ecr.us-east-1.amazonaws.com/peeppeabooks:latest ```
+
+## C. Create an ECS Cluster - https://console.aws.amazon.com/ecr/home.
+
+
+
+## Connecting to the Docker Containers :smiling_imp:
+
+### Check Running Containers: ```docker ps```
+
+### Access the MySQL Container: ```docker exec -it peeppea.books-db mysql -u <username> -p<password>```
+
+### Access the Spring Boot Application Logs: ```docker logs peeppea.books-container```
+
+
+## Stopping and Removing Containers :shaking_face:
+
+### Stop All Running Containers: ```docker-compose down```
+
+### Remove All Stopped Containers: ```docker container prune```
+
+### docker image prune: ```docker image prune```
+
+## Useful Docker Commands :sunglasses:
+
+### List All Docker Images: ```docker images```
+
+### Remove a Specific Docker Image: ```docker rmi <image_id>```
+
+### List All Docker Containers (Running and Stopped): ```docker ps -a```
+
+### Remove a Specific Docker Container: ```docker rm <container_id>```

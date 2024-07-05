@@ -1,4 +1,4 @@
-USE peepea_booksDB;
+USE peeppea_booksDB;
 
 INSERT INTO book (title, author) VALUES ('1984', 'George Orwell');
 INSERT INTO book (title, author) VALUES ('To Kill a Mockingbird', 'Harper Lee');

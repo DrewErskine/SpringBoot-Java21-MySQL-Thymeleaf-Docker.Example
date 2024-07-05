@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS peepea_booksDB;
-USE peepea_booksDB;
+CREATE DATABASE IF NOT EXISTS peeppea_booksDB;
+USE peeppea_booksDB;
 
 DROP TABLE IF EXISTS book;
 CREATE TABLE IF NOT EXISTS book (
