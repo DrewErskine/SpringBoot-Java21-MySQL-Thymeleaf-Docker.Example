@@ -26,8 +26,6 @@ services:
       SPRING_DATASOURCE_PASSWORD: peeppea33
     ports:
       - "8080:8080"
-    volumes:
-      - ./target:/app
 
 volumes:
   db_data:
