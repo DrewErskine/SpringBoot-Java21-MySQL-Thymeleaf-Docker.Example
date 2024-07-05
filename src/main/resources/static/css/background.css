@@ -31,6 +31,7 @@ h1, h2 {
     color: #333; /* Dark charcoal color for text */
 }
 
+/* Styles for the title in the header */
 h2.title {
     flex-grow: 1; /* Allows the title to grow to fill space */
     text-align: left; /* Aligns text to the left */
@@ -42,15 +43,14 @@ h2.title {
     -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
 }
 
-/* Styles for the welcome message in dark mode */
+/* Styles for the welcome message */
 h2.welcome {
     font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
-    font-size: 2.2em; /* Ensure the font size matches the light mode for consistency */
-    color: #719c86; /* Consistent off white color for introductory text */
-    text-shadow: 1px 1px 2px rgba(2, 59, 42, 0.705);; /* Add a more pronounced text shadow */
-    font-weight: 500;
+    font-size: 2.2em; /* Font size for consistency */
+    color: #719c86; /* Text color */
+    text-shadow: 1px 1px 2px rgba(2, 59, 42, 0.705); /* Text shadow for better readability */
+    font-weight: 500; /* Semi-bold text */
 }
-
 
 /* Main content area */
 main {
@@ -62,7 +62,7 @@ main {
 table {
     width: 100%; /* Full width */
     margin-top: 1.8em; /* Margin on top */
-    background-color: rgb(82, 124, 105)989; /* White background */
+    background-color: #527c6989; /* Light green background */
     border-collapse: collapse; /* Collapses table borders */
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
@@ -91,21 +91,21 @@ tr:hover {
 a {
     color: #343c69; /* Darker text color */
     background-color: #95b5bb; /* Light aqua background */
-    font-weight: 777;
+    font-weight: 700; /* Make the text bold */
 
-    padding: 0.625em 1.25em;  /* Consistent padding */
+    padding: 0.625em 1.25em; /* Consistent padding */
     margin-right: 0.625em; /* Consistent right margin */
     margin-left: 0.625em; /* Consistent left margin */
 
     text-decoration: none; /* No underline */
     display: inline-block; /* Allows margins to be applied */
-    border: .2em solid #e49ca8; /* Add a border to links */
-    border-radius: .3em; /* Rounded corners */
+    border: 0.2em solid #e49ca8; /* Add a border to links */
+    border-radius: 0.3em; /* Rounded corners */
 }
 
 a:hover {
-    background-color: #452c6e; /* Lighter on hover for visual feedback */
-    border-color: #FAF0E6; /* Ensure border color remains the same on hover */
+    background-color: #452c6e; /* Darker background on hover */
+    border-color: #FAF0E6; /* Change border color on hover */
 }
 
 /* Toggle button for dark mode */
@@ -114,10 +114,9 @@ a:hover {
     background-color: #8a586b; /* Dark gray background */
 
     border-radius: 0.5em; /* Rounded corners */
-    border: 2px solid #452c6e;
+    border: 2px solid #452c6e; /* Border color */
     box-sizing: border-box; /* Ensure consistent box-sizing */
     padding: 10px 20px; /* Padding around the button */
-
 
     cursor: pointer; /* Pointer cursor on hover */
 }
@@ -131,6 +130,6 @@ a:hover {
 .actions {
     background-color: #C4C3D0; /* Light background for action container */
     opacity: 1; /* Ensure text and elements are fully readable */
-    border: .3em solid #683439; /* Add a border to the action buttons container */
+    border: 0.3em solid #683439; /* Add a border to the action buttons container */
     border-radius: 0.5em; /* Ensure rounded corners for the container */
 }
