@@ -8,7 +8,6 @@ body {
 header {
     background-color: #263238; /* Dark blue-grey for a uniform look */
     color: #4e5963; /* Dark grey for better contrast and visibility */
-    padding: 1em 0; /* 1em vertical padding, no horizontal padding */
     border-bottom: 2px solid #806a74; /* Add a border to the bottom of the header */
 }
 
@@ -20,11 +19,6 @@ header a, .dark-mode-toggle {
 
 /* Styles for the main header title in dark mode */
 h2.title {
-    flex-grow: 1; /* Allows the title to grow to fill space */
-    text-align: left; /* Aligns text to the left */
-    font-size: 3em; /* Increase font size to make the title bigger */
-    font-weight: 700; /* Make the text bold */
-    letter-spacing: 0.05em; /* Slightly increase letter spacing */
     background: linear-gradient(to right, #78b8af, #8280ad); /* Gradient background */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
@@ -32,26 +26,18 @@ h2.title {
 
 /* Styles for the welcome message in dark mode */
 h2.welcome {
-    font-family: 'Bungee', sans-serif; /* 'Bungee', a decorative font */
-    font-size: 2.2em; /* Ensure the font size matches the light mode for consistency */
     color: #af9880; /* Off white color for introductory text */
     text-shadow: 0px 1px 2px #333; /* Add a more pronounced text shadow */
-    font-weight: 400; /* Normal weight text */
 }
 
 /* Table styling for dark mode */
 table.book-table {
-    width: 100%; /* Full width */
-    margin-top: 1.8em; /* Margin on top */
     background-color: #424242; /* Dark background */
-    border-collapse: collapse; /* Collapses table borders */
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .book-table th, .book-table td {
     border: 1px solid #555; /* Dark gray border */
-    padding: 12px; /* Padding inside cells */
-    text-align: left; /* Align text to the left */
 }
 
 .book-table th {
@@ -71,14 +57,7 @@ table.book-table {
 a {
     color: #e7dcd0; /* Light beige, ensuring visibility against the dark background */
     background-color: #455A64; /* Dark slate background for links */
-    font-weight: 700; /* Make the text bold */
-    padding: 0.625em 1.25em;  /* Consistent padding */
-    margin-right: 0.625em; /* Consistent right margin */
-    margin-left: 0.625em; /* Consistent left margin */
-    text-decoration: none; /* No underline */
-    display: inline-block; /* Allows margins to be applied */
     border: 0.2em solid #806a74; /* Add a border to links */
-    border-radius: 0.3em; /* Ensures rounded corners for all links */
 }
 
 a:hover {
@@ -87,17 +66,13 @@ a:hover {
 }
 
 /* Button Styling: Ensures buttons are clearly visible */
-input[type="submit"], .dark-mode-toggle {
+input[type="submit"], .dark-mode-toggle, .EndOfBooks-btn {
     color: #C4C3D0; /* Lavender gray text color */
     background-color: #344955; /* Dark blue-grey, different from link background */
-    border-radius: 5px; /* Consistent border radius with background.css */
     border: 2px solid #BBDEFB; /* Add a border to buttons */
-    box-sizing: border-box; /* Ensure consistent box-sizing */
-    padding: 10px 20px; /* Consistent padding */
-    cursor: pointer; /* Pointer cursor on hover */
 }
 
-input[type="submit"]:hover, .dark-mode-toggle:hover {
+input[type="submit"]:hover, .dark-mode-toggle:hover, .EndOfBooks-btn:hover {
     background-color: #4A6274; /* Slightly lighter on hover */
     border-color: #BBDEFB; /* Ensure border color remains the same on hover */
 }
@@ -105,83 +80,12 @@ input[type="submit"]:hover, .dark-mode-toggle:hover {
 /* Action Buttons Container */
 .actions {
     background-color: #424242; /* Darker background for action container */
-    opacity: 1; /* Remove opacity to ensure text and elements are fully readable */
     border: 0.3em solid #806a74; /* Add a border to the action buttons container */
-    border-radius: 0.5em; /* Ensure rounded corners for the container */
 }
 
 /* Popup styling */
 #book-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
     background-color: #424242;
     border: 1px solid #555;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
-
-.popup-content {
-    padding: 20px;
-}
-
-.popup-content button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    float: right;
-}
-
-/* Char-list styling */
-.char-list {
-    padding: 1em;
-    background-color: #424242;
-    border: 1px solid #555;
-    border-radius: 5px;
-    max-width: 600px;
-    margin-top: 1em;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-}
-
-.char-list div {
-    margin-bottom: 1em;
-    padding: 1em;
-    background-color: #333;
-    border-radius: 5px;
-}
-
-.char-list .title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #C4C3D0;
-}
-
-.char-list .avatar img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.char-list .desc {
-    margin-top: 0.5em;
-    color: #C4C3D0;
-}
-
-.char-list a {
-    color: #BBDEFB;
-    text-decoration: none;
-}
-
-.char-list a:hover {
-    text-decoration: underline;
-}
-
-.char-list .author {
-    font-size: 1em;
-    color: #af9880;
 }

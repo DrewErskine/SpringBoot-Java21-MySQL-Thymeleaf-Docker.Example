@@ -9,11 +9,15 @@ body {
 
 /* Header styles */
 header {
-    background-color: #95b5bb; /* Light aqua background color */
+    background-color: #295680c9; /* Light aqua background color */
+    border-top: 2.3px solid #343c69; /* Border at the top */
+    border-left: 2.1px solid #343c69; /* Border on the left */
+    border-right: 2.1px solid #343c69; /* Border on the right */
     color: #333; /* Dark charcoal text color */
     padding: 1em 0; /* 1em vertical padding, no horizontal padding */
-    border-bottom: 2px solid #fdbaba; /* Add a border to the bottom of the header */
+    border-bottom: 2px solid #fdbaba; /* Border at the bottom */
 }
+
 
 /* Styles for flex container in header */
 .header-content {
@@ -31,16 +35,17 @@ h1, h2 {
     color: #333; /* Dark charcoal color for text */
 }
 
-/* Styles for the title in the header */
 h2.title {
     flex-grow: 1; /* Allows the title to grow to fill space */
     text-align: left; /* Aligns text to the left */
-    font-size: 3em; /* Increase font size to make the title bigger */
-    font-weight: 700; /* Make the text bold */
-    letter-spacing: 0.05em; /* Slightly increase letter spacing */
-    background: linear-gradient(to left, #4b8b6a, #452c6e); /* Gradient background */
+    font-size: 3em; /* Increase font size */
+    font-weight: 600; /* Increase font weight for better visibility */
+    background: linear-gradient(to left, #6FA583, #9C72B0); /* Adjusted gradient colors for better contrast */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
+    -webkit-text-stroke: 1px #333; /* Adds a 1px outline with dark color */
+    margin: 0; /* Removes default margin */
+    padding: 0.2em 0; /* Adds a slight padding for better spacing */
 }
 
 /* Styles for the welcome message */
@@ -70,11 +75,11 @@ table.book-table {
 .book-table th, .book-table td {
     border: 1px solid #ddd; /* Light gray border */
     padding: 12px; /* Padding inside cells */
-    text-align: left; /* Align text to the left */
+    justify-content: space-between;
 }
 
 .book-table th {
-    background-color: #30b0b4; /* Custom light teal background */
+    background-color: #859fbdbb; /* Custom light teal background */
     color: #333; /* Dark charcoal text */
 }
 
@@ -120,88 +125,4 @@ a:hover {
 .dark-mode-toggle:hover {
     background-color: #b685a7; /* Dark pink on hover */
     border: 3px solid #6e2c47; /* Add a border on hover */
-}
-
-/* Action Buttons Container */
-.actions {
-    background-color: #C4C3D0; /* Light background for action container */
-    opacity: 1; /* Ensure text and elements are fully readable */
-    border: 0.3em solid #683439; /* Add a border to the action buttons container */
-    border-radius: 0.5em; /* Ensure rounded corners for the container */
-}
-
-/* Popup styling */
-#book-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background-color: #dad5d5; /* Light background for popup in light mode */
-    border: 1px solid #333; /* Dark border */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
-}
-
-.popup-content {
-    padding: 20px;
-}
-
-.popup-content button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    float: right;
-}
-
-/* Char-list styling */
-.char-list {
-    padding: 1em;
-    background-color: #dad5d5; /* Light background for char-list in light mode */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 5px;
-    max-width: 600px;
-    margin-top: 1em;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
-}
-
-.char-list div {
-    margin-bottom: 1em;
-    padding: 1em;
-    background-color: #f2f2f2; /* Light background for individual entries */
-    border-radius: 5px;
-}
-
-.char-list .title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333; /* Dark text color */
-}
-
-.char-list .avatar img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.char-list .desc {
-    margin-top: 0.5em;
-    color: #333; /* Dark text color */
-}
-
-.char-list a {
-    color: #343c69; /* Darker text color */
-    text-decoration: none;
-}
-
-.char-list a:hover {
-    text-decoration: underline;
-}
-
-.char-list .author {
-    font-size: 1em;
-    color: #719c86; /* Match the text color of the welcome message */
 }

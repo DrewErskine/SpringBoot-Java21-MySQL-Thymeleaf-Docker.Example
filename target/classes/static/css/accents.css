@@ -6,6 +6,12 @@
     background-color: #815e64; /* Sets a soft, muted pink background color for the container */
     padding: 3em; /* 3em of padding all around the inside of the container to create space between the content and container edges */
     opacity: 0.8; /* Sets the opacity of the container to 80%, making it slightly transparent */
+    border: 0.3em solid #245e51; /* Add a border to the action buttons container */
+}
+
+/* Aligns actions column to the right side of the table */
+.actions-column {
+    align-items: center;
 }
 
 /* Popup styling */
@@ -35,51 +41,26 @@
     float: right;
 }
 
-/* Char-list styling */
-.char-list {
-    padding: 1em;
-    background-color: #424242;
-    border: 1px solid #555;
-    border-radius: 5px;
-    max-width: 600px;
-    margin-top: 1em;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+/* Aligns actions column to the right side of the table */
+.read-like-column {
+    border: #304d52;
+    padding-top: .3em;
+    margin-right: -1em
 }
 
-.char-list div {
-    margin-bottom: 1em;
-    padding: 1em;
-    background-color: #333;
-    border-radius: 5px;
+.read-like-column button {
+    margin-left: 3em; /* Adds space between the buttons */
 }
 
-.char-list .title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #C4C3D0;
+/* Dark Mode Specific Styles for EndOfBooks-btn */
+.EndOfBooks-btn {
+    background-color: #304d52;  /* Darker background suitable for dark mode */
+    color: #C4C3D0;             /* Lighter text color for better contrast */
+    border: 2px solid #3f7880;  /* Subtle border color that fits dark themes */
 }
 
-.char-list .avatar img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.char-list .desc {
-    margin-top: 0.5em;
-    color: #C4C3D0;
-}
-
-.char-list a {
-    color: #BBDEFB;
-    text-decoration: none;
-}
-
-.char-list a:hover {
-    text-decoration: underline;
-}
-
-.char-list .author {
-    font-size: 1em;
-    color: #af9880;
+.EndOfBooks-btn:hover {
+    background-color: #794e68;  /* Even lighter background on hover for feedback */
+    border-color: #245e51;      /* Light blue to maintain visibility and contrast */
+    color: rgb(54, 86, 92);             /* Change text color to white for better contrast on hover */
 }

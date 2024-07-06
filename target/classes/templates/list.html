@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Books List</title>
@@ -41,6 +42,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -69,16 +71,21 @@
                         <td th:text="${book.author}">Author Name</td>
                         <td>
                             <button type="button" onclick="showBookPopup()">
-                                <img src="/images/icon-book-white.svg" width="36" height="36" alt="Book Form">
+                                <img src="/images/icon-profile.svg" width="36" height="36" alt="Book Form">
+                            </button>
+                            <button type="button" th:onclick="'likeBook(' + ${book.id} + ')'">
+                                <img src="/images/like-icon.svg" width="36" height="36" alt="Like Book">
                             </button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section style="padding-top: 3em;">
             <div class="actions">
-                <a th:href="@{/}" class="btn">Home</a>
-                <a th:href="@{/books/add}" class="btn">Add New Book</a>
-                <a th:href="@{/books}" class="btn btn-secondary">Search</a>
+                <a th:href="@{/}" class="EndOfBooks-btn">Home</a>
+                <a th:href="@{/books/add}" class="EndOfBooks-btn">Add New Book</a>
+                <a th:href="@{/books}" class="btn-secondary EndOfBooks-btn">Search</a>
             </div>
         </section>
 
@@ -93,11 +100,11 @@
                         <dt id="name-SampleBook" style="font-size: 13px; font-weight: bold;"></dt>
                         <dd class="title">Sample Book Title</dd>
                         <dd class="avatar">
-                            <img src="/images/books/sample-book.jpg"
-                                width="400" height="275" alt="Sample Book Cover">
+                            <img src="/images/books/sample-book.jpg" width="400" height="275" alt="Sample Book Cover">
                         </dd>
                         <dd class="desc">This is a sample book description.</dd>
-                        <dd><a href="#" id="more-SampleBook" aria-labelledby="more-SampleBook name-SampleBook">See more details</a></dd>
+                        <dd><a href="#" id="more-SampleBook" aria-labelledby="more-SampleBook name-SampleBook">See more
+                                details</a></dd>
                         <dd class="author" style="font-size: 20px; font-weight: bold;">By: Sample Author</dd>
                     </div>
                 </dl>
@@ -105,4 +112,5 @@
         </div>
     </main>
 </body>
+
 </html>

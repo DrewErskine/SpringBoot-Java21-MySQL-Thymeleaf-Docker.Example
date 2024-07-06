@@ -70,3 +70,22 @@ input[type="submit"]:hover {
     background-color: #789c93; /* Lighter background on hover */
     border-color: #fff; /* Change border color on hover */
 }
+
+/* Button Styling: Ensures buttons are clearly visible and consistent across themes */
+.EndOfBooks-btn {
+    padding: 2em 3em; /* Simplified padding syntax */
+    font-size: 1.2em;
+    text-align: center;
+    justify-content: space-between;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px; /* Consistent border-radius */
+    background-color: #567ca8b6; /* Background color */
+    color: #612a36e0; /* Text color */
+    border: 2px solid #524764; /* Border color */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.EndOfBooks-btn:hover {
+    background-color: #789c93;
+}
