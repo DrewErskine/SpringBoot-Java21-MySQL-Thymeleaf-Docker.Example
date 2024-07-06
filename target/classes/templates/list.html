@@ -6,29 +6,96 @@
     <link rel="stylesheet" th:href="@{/css/background.css}">
     <link rel="stylesheet" th:href="@{/css/accessories.css}">
     <link rel="stylesheet" th:href="@{/css/accents.css}">
+    <link id="darkModeCss" rel="stylesheet" href="" disabled>
+    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+    <script>
+        function toggleDarkMode() {
+            var darkModeCss = document.getElementById('darkModeCss');
+            if (darkModeCss.disabled) {
+                darkModeCss.href = '/css/darkmode.css';
+                darkModeCss.disabled = false;
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeCss.href = '';
+                darkModeCss.disabled = true;
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Check local storage for dark mode setting on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.getElementById('darkModeCss').href = '/css/darkmode.css';
+                document.getElementById('darkModeCss').disabled = false;
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1>Book Management System</h1>
+        <div class="header-content">
+            <h2 class="title">Peep Peas' <br> Book Management Sys.</h2>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
     </header>
     <main>
-        <h2>Books List</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="book : ${books}">
-                    <td th:text="${book.id}">1</td>
-                    <td th:text="${book.title}">Book Title</td>
-                    <td th:text="${book.author}">Author Name</td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="content-wrapper">
+            <div class="actions">
+                <h2 class="welcome">Books List</h2>
+            </div>
+            <table class="book-table" style="padding: 1.3em;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="book : ${books}">
+                        <td th:text="${book.id}">1</td>
+                        <td th:text="${book.title}">Book Title</td>
+                        <td th:text="${book.author}">Author Name</td>
+                        <td class="search-widget">
+                            <button type="button" aria-expanded="false" aria-controls="search-popup" onclick="toggleSearchPopup(this)">
+                                <img src="/images/icon-search-white.svg" width="36" height="36" alt="Search Form">
+                            </button>
+                            <div id="search-popup" aria-hidden="true">
+                                <form method="post" role="search">
+                                    <input type="search" aria-label="Enter product name" placeholder="Search&hellip;" required>
+                                    <button type="submit">Search</button>
+                                </form>
+                                <button type="button" onclick="closeSearchPopup(this)">
+                                    <img src="/images/icon-xmark.svg" width="26" height="26" alt="Close">
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="padding: 2.3em;"></div>
+            <div class="actions">
+                <a th:href="@{/}" class="btn">Home</a>
+                <a th:href="@{/books/add}" class="btn">Add New Book</a>
+                <a th:href="@{/books}" class="btn btn-secondary">Search</a>
+            </div>
+        </section>
     </main>
+    <script>
+        function toggleSearchPopup(button) {
+            const searchPopup = button.nextElementSibling;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            searchPopup.setAttribute('aria-hidden', isExpanded);
+        }
+
+        function closeSearchPopup(button) {
+            const searchPopup = button.parentElement;
+            const toggleButton = searchPopup.previousElementSibling;
+            toggleButton.setAttribute('aria-expanded', 'false');
+            searchPopup.setAttribute('aria-hidden', 'true');
+        }
+    </script>
 </body>
 </html>

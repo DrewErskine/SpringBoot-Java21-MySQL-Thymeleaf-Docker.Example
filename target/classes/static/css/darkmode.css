@@ -40,16 +40,42 @@ h2.welcome {
     font-weight: 400; /* Normal weight text */
 }
 
+/* Table styling for dark mode */
+table.book-table {
+    width: 100%; /* Full width */
+    margin-top: 1.8em; /* Margin on top */
+    background-color: #424242; /* Dark background */
+    border-collapse: collapse; /* Collapses table borders */
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #555; /* Dark gray border */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+.book-table th {
+    background-color: #546E7A; /* Darker teal background */
+    color: #C4C3D0; /* Light text color */
+}
+
+.book-table tr:nth-child(even) {
+    background-color: #383838; /* Slightly lighter dark gray for even rows */
+}
+
+.book-table tr:hover {
+    background-color: #546E7A; /* Lighter teal on hover */
+}
+
 /* Enhanced link styles for better visibility in dark mode */
 a {
     color: #e7dcd0; /* Light beige, ensuring visibility against the dark background */
     background-color: #455A64; /* Dark slate background for links */
     font-weight: 700; /* Make the text bold */
-
     padding: 0.625em 1.25em;  /* Consistent padding */
     margin-right: 0.625em; /* Consistent right margin */
     margin-left: 0.625em; /* Consistent left margin */
-
     text-decoration: none; /* No underline */
     display: inline-block; /* Allows margins to be applied */
     border: 0.2em solid #806a74; /* Add a border to links */
@@ -65,12 +91,10 @@ a:hover {
 input[type="submit"], .dark-mode-toggle {
     color: #C4C3D0; /* Lavender gray text color */
     background-color: #344955; /* Dark blue-grey, different from link background */
-
     border-radius: 5px; /* Consistent border radius with background.css */
     border: 2px solid #BBDEFB; /* Add a border to buttons */
     box-sizing: border-box; /* Ensure consistent box-sizing */
     padding: 10px 20px; /* Consistent padding */
-
     cursor: pointer; /* Pointer cursor on hover */
 }
 

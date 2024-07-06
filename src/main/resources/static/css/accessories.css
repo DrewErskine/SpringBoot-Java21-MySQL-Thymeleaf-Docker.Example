@@ -2,20 +2,17 @@
 
 /* Label Styling: Makes labels bold */
 label {
-    font-weight: bold;
-    /* Sets font weight to bold */
+    font-weight: bold; /* Sets font weight to bold */
 }
 
 /* Content Div Styling: Adds spacing below each div for better layout */
 div {
-    margin-bottom: 0.625em;
-    /* Adds a margin below each div, equivalent to 10px */
+    margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
 }
 
 /* Hover State Styling */
 
 /* Hover State for Links: Changes background color on mouse-over */
 a:hover {
-    background-color: #A3C4BC;
-    /* Changes background color to a lighter teal on hover */
+    background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
 }

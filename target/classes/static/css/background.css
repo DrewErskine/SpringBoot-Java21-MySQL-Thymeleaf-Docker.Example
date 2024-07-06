@@ -59,7 +59,7 @@ main {
 }
 
 /* Table styling */
-table {
+table.book-table {
     width: 100%; /* Full width */
     margin-top: 1.8em; /* Margin on top */
     background-color: #527c6989; /* Light green background */
@@ -67,24 +67,24 @@ table {
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-th, td {
+.book-table th, .book-table td {
     border: 1px solid #ddd; /* Light gray border */
     padding: 12px; /* Padding inside cells */
     text-align: left; /* Align text to the left */
 }
 
-th {
+.book-table th {
     background-color: #30b0b4; /* Custom light teal background */
     color: #333; /* Dark charcoal text */
 }
 
 /* Row styling */
-tr:nth-child(even) {
+.book-table tr:nth-child(even) {
     background-color: #f2f2f2; /* Light gray for even rows */
 }
 
-tr:hover {
-    background-color: #A3C4BC; /* Lighter teal on hover */
+.book-table tr:hover {
+    background-color: #789c93; /* Lighter teal on hover */
 }
 
 /* Link styling */
@@ -92,11 +92,9 @@ a {
     color: #343c69; /* Darker text color */
     background-color: #95b5bb; /* Light aqua background */
     font-weight: 700; /* Make the text bold */
-
     padding: 0.625em 1.25em; /* Consistent padding */
     margin-right: 0.625em; /* Consistent right margin */
     margin-left: 0.625em; /* Consistent left margin */
-
     text-decoration: none; /* No underline */
     display: inline-block; /* Allows margins to be applied */
     border: 0.2em solid #e49ca8; /* Add a border to links */
@@ -112,12 +110,10 @@ a:hover {
 .dark-mode-toggle {
     color: #C4C3D0; /* Lavender gray text color */
     background-color: #8a586b; /* Dark gray background */
-
     border-radius: 0.5em; /* Rounded corners */
     border: 2px solid #452c6e; /* Border color */
     box-sizing: border-box; /* Ensure consistent box-sizing */
     padding: 10px 20px; /* Padding around the button */
-
     cursor: pointer; /* Pointer cursor on hover */
 }
 

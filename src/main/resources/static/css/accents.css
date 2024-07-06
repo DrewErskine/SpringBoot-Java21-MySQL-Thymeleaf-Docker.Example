@@ -4,6 +4,36 @@
     gap: 10px; /* Sets a fixed gap of 10px between each child element within the container */
     justify-content: center; /* Centers the action buttons horizontally within the container */
     background-color: #815e64; /* Sets a soft, muted pink background color for the container */
-    padding: 3em; /* 13em of padding all around the inside of the container to create space between the content and container edges */
+    padding: 3em; /* 3em of padding all around the inside of the container to create space between the content and container edges */
     opacity: 0.8; /* Sets the opacity of the container to 80%, making it slightly transparent */
+}
+
+/* Search Widget */
+.search-widget {
+    display: flex;
+    justify-content: flex-end; /* Aligns the search widget to the right */
+    align-items: center;
+}
+
+.search-widget button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.actions-column {
+    width: 50px; /* Shrinks the width of the actions column */
+}
+
+#search-popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#search-popup[aria-hidden="false"] {
+    display: block;
 }
