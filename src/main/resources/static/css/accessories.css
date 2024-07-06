@@ -10,9 +10,63 @@ div {
     margin-bottom: 0.625em; /* Adds a margin below each div, equivalent to 10px */
 }
 
+/* Button Styling: Ensures buttons are clearly visible and consistent across themes */
+button {
+    background-color: #527c69; /* Default background color for buttons */
+    color: #fff; /* White text color */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Consistent padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #789c93; /* Lighter background on hover */
+    border-color: #fff; /* Change border color on hover */
+}
+
 /* Hover State Styling */
 
 /* Hover State for Links: Changes background color on mouse-over */
 a:hover {
     background-color: #A3C4BC; /* Changes background color to a lighter teal on hover */
+}
+
+/* Popup Close Button Styling: Ensures close button is consistent across themes */
+.popup-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+/* Input Field Styling: Consistent styling for form input fields */
+input[type="search"], input[type="text"], input[type="password"], input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Dark border for input fields */
+    background-color: #f2f2f2; /* Light background for input fields */
+    color: #333; /* Dark text color */
+    width: calc(100% - 22px); /* Full width minus padding and border */
+}
+
+input[type="search"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #527c69; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button Styling: Ensures submit buttons are clearly visible and consistent across themes */
+input[type="submit"] {
+    color: #fff; /* White text color */
+    background-color: #527c69; /* Default background color for submit button */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #333; /* Dark border */
+    box-sizing: border-box; /* Ensure consistent box-sizing */
+    padding: 10px 20px; /* Consistent padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #789c93; /* Lighter background on hover */
+    border-color: #fff; /* Change border color on hover */
 }

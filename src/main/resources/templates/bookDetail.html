@@ -6,10 +6,37 @@
     <link rel="stylesheet" th:href="@{/css/background.css}">
     <link rel="stylesheet" th:href="@{/css/accessories.css}">
     <link rel="stylesheet" th:href="@{/css/accents.css}">
+    <link id="darkModeCss" rel="stylesheet" href="" disabled>
+    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+    <script>
+        function toggleDarkMode() {
+            var darkModeCss = document.getElementById('darkModeCss');
+            if (darkModeCss.disabled) {
+                darkModeCss.href = '/css/darkmode.css';
+                darkModeCss.disabled = false;
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeCss.href = '';
+                darkModeCss.disabled = true;
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Check local storage for dark mode setting on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.getElementById('darkModeCss').href = '/css/darkmode.css';
+                document.getElementById('darkModeCss').disabled = false;
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1>Book Management System</h1>
+        <div class="header-content">
+            <h2 class="title">Peep Peas' <br> Book Management Sys.</h2>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
     </header>
     <main>
         <h2>Book Details</h2>

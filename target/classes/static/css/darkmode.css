@@ -1,5 +1,4 @@
 /* General Element Styling for Dark Mode */
-
 body {
     background-color: #333; /* Ensure dark mode has a uniform dark background */
     color: #C4C3D0; /* Lavender gray for better contrast */
@@ -109,4 +108,80 @@ input[type="submit"]:hover, .dark-mode-toggle:hover {
     opacity: 1; /* Remove opacity to ensure text and elements are fully readable */
     border: 0.3em solid #806a74; /* Add a border to the action buttons container */
     border-radius: 0.5em; /* Ensure rounded corners for the container */
+}
+
+/* Popup styling */
+#book-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: #424242;
+    border: 1px solid #555;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.popup-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+/* Char-list styling */
+.char-list {
+    padding: 1em;
+    background-color: #424242;
+    border: 1px solid #555;
+    border-radius: 5px;
+    max-width: 600px;
+    margin-top: 1em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.char-list div {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.char-list .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #C4C3D0;
+}
+
+.char-list .avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.char-list .desc {
+    margin-top: 0.5em;
+    color: #C4C3D0;
+}
+
+.char-list a {
+    color: #BBDEFB;
+    text-decoration: none;
+}
+
+.char-list a:hover {
+    text-decoration: underline;
+}
+
+.char-list .author {
+    font-size: 1em;
+    color: #af9880;
 }

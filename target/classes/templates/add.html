@@ -14,9 +14,11 @@
             if (darkModeCss.disabled) {
                 darkModeCss.href = '/css/darkmode.css';
                 darkModeCss.disabled = false;
+                localStorage.setItem('darkMode', 'enabled');
             } else {
                 darkModeCss.href = '';
                 darkModeCss.disabled = true;
+                localStorage.setItem('darkMode', 'disabled');
             }
         }
 

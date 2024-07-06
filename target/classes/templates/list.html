@@ -29,6 +29,16 @@
                 document.getElementById('darkModeCss').disabled = false;
             }
         });
+
+        function showBookPopup() {
+            const popup = document.getElementById('book-popup');
+            popup.style.display = 'block';
+        }
+
+        function closeBookPopup() {
+            const popup = document.getElementById('book-popup');
+            popup.style.display = 'none';
+        }
     </script>
 </head>
 <body>
@@ -43,13 +53,13 @@
             <div class="actions">
                 <h2 class="welcome">Books List</h2>
             </div>
-            <table class="book-table" style="padding: 1.3em;">
+            <table class="book-table">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
                         <th>Author</th>
-                        <th>Actions</th>
+                        <th class="actions-column">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,45 +67,42 @@
                         <td th:text="${book.id}">1</td>
                         <td th:text="${book.title}">Book Title</td>
                         <td th:text="${book.author}">Author Name</td>
-                        <td class="search-widget">
-                            <button type="button" aria-expanded="false" aria-controls="search-popup" onclick="toggleSearchPopup(this)">
-                                <img src="/images/icon-search-white.svg" width="36" height="36" alt="Search Form">
+                        <td>
+                            <button type="button" onclick="showBookPopup()">
+                                <img src="/images/icon-book-white.svg" width="36" height="36" alt="Book Form">
                             </button>
-                            <div id="search-popup" aria-hidden="true">
-                                <form method="post" role="search">
-                                    <input type="search" aria-label="Enter product name" placeholder="Search&hellip;" required>
-                                    <button type="submit">Search</button>
-                                </form>
-                                <button type="button" onclick="closeSearchPopup(this)">
-                                    <img src="/images/icon-xmark.svg" width="26" height="26" alt="Close">
-                                </button>
-                            </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div style="padding: 2.3em;"></div>
             <div class="actions">
                 <a th:href="@{/}" class="btn">Home</a>
                 <a th:href="@{/books/add}" class="btn">Add New Book</a>
                 <a th:href="@{/books}" class="btn btn-secondary">Search</a>
             </div>
         </section>
-    </main>
-    <script>
-        function toggleSearchPopup(button) {
-            const searchPopup = button.nextElementSibling;
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', !isExpanded);
-            searchPopup.setAttribute('aria-hidden', isExpanded);
-        }
 
-        function closeSearchPopup(button) {
-            const searchPopup = button.parentElement;
-            const toggleButton = searchPopup.previousElementSibling;
-            toggleButton.setAttribute('aria-expanded', 'false');
-            searchPopup.setAttribute('aria-hidden', 'true');
-        }
-    </script>
+        <div id="book-popup" style="display:none;">
+            <div class="popup-content">
+                <button type="button" onclick="closeBookPopup()">
+                    <img src="/images/icon-xmark.svg" width="26" height="26" alt="Close">
+                </button>
+                <dl class="char-list">
+                    <!-- Example static book result -->
+                    <div data-full-img="/images/books/sample-book.jpg">
+                        <dt id="name-SampleBook" style="font-size: 13px; font-weight: bold;"></dt>
+                        <dd class="title">Sample Book Title</dd>
+                        <dd class="avatar">
+                            <img src="/images/books/sample-book.jpg"
+                                width="400" height="275" alt="Sample Book Cover">
+                        </dd>
+                        <dd class="desc">This is a sample book description.</dd>
+                        <dd><a href="#" id="more-SampleBook" aria-labelledby="more-SampleBook name-SampleBook">See more details</a></dd>
+                        <dd class="author" style="font-size: 20px; font-weight: bold;">By: Sample Author</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
