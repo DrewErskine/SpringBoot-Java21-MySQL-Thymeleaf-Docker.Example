@@ -45,7 +45,7 @@
 .read-like-column {
     border: #304d52;
     padding-top: .3em;
-    margin-right: -1em
+    margin-right: -3em
 }
 
 .read-like-column button {
@@ -62,5 +62,5 @@
 .EndOfBooks-btn:hover {
     background-color: #794e68;  /* Even lighter background on hover for feedback */
     border-color: #245e51;      /* Light blue to maintain visibility and contrast */
-    color: rgb(54, 86, 92);             /* Change text color to white for better contrast on hover */
+    color: #794e68;             /* Change text color to white for better contrast on hover */
 }

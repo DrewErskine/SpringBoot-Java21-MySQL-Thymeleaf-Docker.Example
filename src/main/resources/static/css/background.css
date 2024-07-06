@@ -81,6 +81,7 @@ table.book-table {
 .book-table th {
     background-color: #859fbdbb; /* Custom light teal background */
     color: #333; /* Dark charcoal text */
+    font-weight: 500;
 }
 
 /* Row styling */

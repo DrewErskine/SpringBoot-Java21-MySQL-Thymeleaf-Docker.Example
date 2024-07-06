@@ -42,7 +42,8 @@ table.book-table {
 
 .book-table th {
     background-color: #546E7A; /* Darker teal background */
-    color: #C4C3D0; /* Light text color */
+    color: #c3bff5; /* Light text color */
+    font-weight: 500;
 }
 
 .book-table tr:nth-child(even) {
@@ -88,4 +89,18 @@ input[type="submit"]:hover, .dark-mode-toggle:hover, .EndOfBooks-btn:hover {
     background-color: #424242;
     border: 1px solid #555;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode button styles */
+td button {
+    background-color: #344955; /* Dark mode background color */
+    border: 2px solid #BBDEFB; /* Dark mode border color */
+    border-radius: 5px; /* Dark mode border radius */
+    padding: 10px; /* Dark mode padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+td button:hover {
+    background-color: #4A6274; /* Dark mode hover background color */
+    border-color: #BBDEFB; /* Dark mode hover border color */
 }
