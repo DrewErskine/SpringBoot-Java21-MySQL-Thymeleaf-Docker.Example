@@ -63,8 +63,8 @@ public class BookController {
 
     @PostMapping("/update/{id}")
     public String updateBook(@PathVariable Long id, @ModelAttribute Book book) {
-        book.setId(id); // Set the ID to ensure the entity is updated
+        book.setId(id);
         bookRepository.save(book);
-        return "redirect:/books"; // Redirects to the listing page after updating
+        return "redirect:/books";
     }
 }
