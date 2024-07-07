@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 C:\Users\Dmers\Code\Practice\SpringBoot-Java21-Thymeleaf-DockerExample\src\main\java\peep\pea\docker\controller\BookController.java
 C:\Users\Dmers\Code\Practice\SpringBoot-Java21-Thymeleaf-DockerExample\src\main\java\peep\pea\docker\controller\HomeController.java
 C:\Users\Dmers\Code\Practice\SpringBoot-Java21-Thymeleaf-DockerExample\src\main\java\peep\pea\docker\DockerApplication.java
 C:\Users\Dmers\Code\Practice\SpringBoot-Java21-Thymeleaf-DockerExample\src\main\java\peep\pea\docker\model\Book.java
 C:\Users\Dmers\Code\Practice\SpringBoot-Java21-Thymeleaf-DockerExample\src\main\java\peep\pea\docker\repository\BookRepository.java
-=======
-/Users/drew/Desktop/Projects/SpringBoot-Java21-Thymeleaf-Docker.Example/src/main/java/peep/pea/docker/DockerApplication.java
-/Users/drew/Desktop/Projects/SpringBoot-Java21-Thymeleaf-Docker.Example/src/main/java/peep/pea/docker/controller/BookController.java
-/Users/drew/Desktop/Projects/SpringBoot-Java21-Thymeleaf-Docker.Example/src/main/java/peep/pea/docker/controller/HomeController.java
-/Users/drew/Desktop/Projects/SpringBoot-Java21-Thymeleaf-Docker.Example/src/main/java/peep/pea/docker/model/Book.java
-/Users/drew/Desktop/Projects/SpringBoot-Java21-Thymeleaf-Docker.Example/src/main/java/peep/pea/docker/repository/BookRepository.java
->>>>>>> de8e77e1780db2f26ea39e6e3ad26dc6881fb2bb
