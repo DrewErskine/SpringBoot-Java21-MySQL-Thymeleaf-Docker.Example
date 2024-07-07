@@ -3,7 +3,7 @@ services:
     image: mysql:8.0.37
     container_name: peeppea.books-db
     environment:
-      MYSQL_ROOT_PASSWORD: Devindrew42!
+      MYSQL_ROOT_PASSWORD: 
       MYSQL_DATABASE: peeppea_booksDB
       MYSQL_USER: drew
       MYSQL_PASSWORD: peeppea33

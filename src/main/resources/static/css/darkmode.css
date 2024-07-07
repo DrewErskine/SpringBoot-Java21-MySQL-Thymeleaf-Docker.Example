@@ -61,10 +61,23 @@ a {
     border: 0.2em solid #806a74; /* Add a border to links */
 }
 
+input {
+    color: #e7dcd0; /* Light beige, ensuring visibility against the dark background */
+    background-color: #455A64; /* Dark slate background for links */
+    border: 0.2em solid #806a74; /* Add a border to links */
+}
+
 a:hover {
     background-color: #546E7A; /* Lighter on hover for visual feedback */
     border-color: #BBDEFB; /* Ensure border color remains the same on hover */
 }
+
+input:hover {
+    background-color: #546E7A; /* Lighter on hover for visual feedback */
+    border-color: #BBDEFB; /* Ensure border color remains the same on hover */
+}
+
+
 
 /* Button Styling: Ensures buttons are clearly visible */
 input[type="submit"], .dark-mode-toggle, .EndOfBooks-btn {
