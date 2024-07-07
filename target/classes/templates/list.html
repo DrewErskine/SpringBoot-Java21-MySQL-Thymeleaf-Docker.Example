@@ -85,7 +85,7 @@
             <div class="actions">
                 <a th:href="@{/}" class="EndOfBooks-btn">Home</a>
                 <a th:href="@{/books/add}" class="EndOfBooks-btn">Add New Book</a>
-                <a th:href="@{/books}" class="btn-secondary EndOfBooks-btn">Search</a>
+                <a th:href="@{/books}" class="EndOfBooks-btn">Search</a>
             </div>
         </section>
 
@@ -97,15 +97,11 @@
                 <dl class="char-list">
                     <!-- Example static book result -->
                     <div data-full-img="/images/books/sample-book.jpg">
-                        <dt id="name-SampleBook" style="font-size: 13px; font-weight: bold;"></dt>
-                        <dd class="title">Sample Book Title</dd>
+                        <dt id="name-SampleBook" style="font-size: 13px; font-weight: bold; padding-bottom: 3em"></dt>
                         <dd class="avatar">
-                            <img src="/images/books/sample-book.jpg" width="400" height="275" alt="Sample Book Cover">
+                            <img src="/images/books/1984.jpg" width="270" height="400" alt="1984">
                         </dd>
-                        <dd class="desc">This is a sample book description.</dd>
-                        <dd><a href="#" id="more-SampleBook" aria-labelledby="more-SampleBook name-SampleBook">See more
-                                details</a></dd>
-                        <dd class="author" style="font-size: 20px; font-weight: bold;">By: Sample Author</dd>
+                        <dd><a href="#" id="more-SampleBook" aria-labelledby="more-SampleBook name-SampleBook" style="padding-top: 1em;">Add more details</a></dd>
                     </div>
                 </dl>
             </div>

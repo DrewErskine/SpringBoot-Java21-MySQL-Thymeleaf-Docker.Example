@@ -9,13 +9,14 @@ body {
 
 /* Header styles */
 header {
-    background-color: #295680c9; /* Light aqua background color */
+    background-color: #7191b4bb; /* Light aqua background color */
     border-top: 2.3px solid #343c69; /* Border at the top */
-    border-left: 2.1px solid #343c69; /* Border on the left */
-    border-right: 2.1px solid #343c69; /* Border on the right */
+    border-left: 2.1px solid #414770; /* Border on the left */
+    border-right: 2.1px solid #414770; /* Border on the right */
+    border-bottom: 2.1px solid #61678d; /* Border on the right */
     color: #333; /* Dark charcoal text color */
     padding: 1em 0; /* 1em vertical padding, no horizontal padding */
-    border-bottom: 2px solid #fdbaba; /* Border at the bottom */
+    transition: background-color 0.3s ease;
 }
 
 
@@ -38,12 +39,12 @@ h1, h2 {
 h2.title {
     flex-grow: 1; /* Allows the title to grow to fill space */
     text-align: left; /* Aligns text to the left */
-    font-size: 3em; /* Increase font size */
+    font-size: 3.3em; /* Increase font size */
     font-weight: 600; /* Increase font weight for better visibility */
     background: linear-gradient(to left, #6FA583, #9C72B0); /* Adjusted gradient colors for better contrast */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Fill the text with the background gradient */
-    -webkit-text-stroke: 1px #333; /* Adds a 1px outline with dark color */
+    -webkit-text-stroke: 2px #333; /* Adds a 1px outline with dark color */
     margin: 0; /* Removes default margin */
     padding: 0.2em 0; /* Adds a slight padding for better spacing */
 }
@@ -117,13 +118,14 @@ a:hover {
     color: #C4C3D0; /* Lavender gray text color */
     background-color: #8a586b; /* Dark gray background */
     border-radius: 0.5em; /* Rounded corners */
-    border: 2px solid #452c6e; /* Border color */
+    border: 2px solid #414770; /* Border color */
     box-sizing: border-box; /* Ensure consistent box-sizing */
     padding: 10px 20px; /* Padding around the button */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
 .dark-mode-toggle:hover {
+    color: #606792;
     background-color: #b685a7; /* Dark pink on hover */
-    border: 3px solid #6e2c47; /* Add a border on hover */
+    border: 2px solid #6e2c47; /* Add a border on hover */
 }

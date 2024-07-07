@@ -18,6 +18,7 @@ button {
     border-radius: 5px; /* Rounded corners */
     padding: 10px 20px; /* Consistent padding */
     cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -87,19 +88,46 @@ input[type="submit"]:hover {
 
 /* Button Styling: Ensures buttons are clearly visible and consistent across themes */
 .EndOfBooks-btn {
-    padding: 2em 3em; /* Simplified padding syntax */
-    font-size: 1.2em;
+    padding: 1.3em 2.3em; /* Simplified padding syntax */
+    font-size: 1.3em;
     text-align: center;
     justify-content: space-between;
     display: inline-block;
     cursor: pointer;
     border-radius: 8px; /* Consistent border-radius */
     background-color: #567ca8b6; /* Background color */
-    color: #612a36e0; /* Text color */
+    color: #3f215ae3; /* Text color */
     border: 2px solid #524764; /* Border color */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .EndOfBooks-btn:hover {
-    background-color: #789c93;
+    color: #64219b85; /* Text color on hover */
+    background-color: #978ea7; /* Background color on hover */
+    border: 2px solid #52747c
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-primary, .btn-secondary {
+    border-radius: 4px;
+    font-size: 1em;
+}
+input.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

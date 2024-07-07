@@ -51,16 +51,3 @@
 .read-like-column button {
     margin-left: 3em; /* Adds space between the buttons */
 }
-
-/* Dark Mode Specific Styles for EndOfBooks-btn */
-.EndOfBooks-btn {
-    background-color: #304d52;  /* Darker background suitable for dark mode */
-    color: #C4C3D0;             /* Lighter text color for better contrast */
-    border: 2px solid #3f7880;  /* Subtle border color that fits dark themes */
-}
-
-.EndOfBooks-btn:hover {
-    background-color: #794e68;  /* Even lighter background on hover for feedback */
-    border-color: #245e51;      /* Light blue to maintain visibility and contrast */
-    color: #794e68;             /* Change text color to white for better contrast on hover */
-}

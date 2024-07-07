@@ -4,12 +4,16 @@ body {
     color: #C4C3D0; /* Lavender gray for better contrast */
 }
 
-/* Header styles for dark mode */
 header {
     background-color: #263238; /* Dark blue-grey for a uniform look */
-    color: #4e5963; /* Dark grey for better contrast and visibility */
-    border-bottom: 2px solid #806a74; /* Add a border to the bottom of the header */
+    border-top: 2.3px solid #204e57; /* Border at the top */
+    border-left: 2.1px solid #546E7A; /* Border on the left */
+    border-right: 2.1px solid #546E7A; /* Border on the right */
+    border-bottom: 2.1px solid #649dbe; /* Border on the right */
+    color: #c0d8ee; /* Dark grey for better contrast and visibility */
+    padding: 1em 0; /* 1em vertical padding, no horizontal padding */
 }
+
 
 /* Link styles in the header and dark mode toggle button */
 header a, .dark-mode-toggle {
