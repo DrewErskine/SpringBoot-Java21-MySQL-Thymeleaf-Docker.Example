@@ -1,5 +1,5 @@
-peep\pea\docker\controller\HomeController.class
-peep\pea\docker\DockerApplication.class
-peep\pea\docker\repository\BookRepository.class
-peep\pea\docker\controller\BookController.class
-peep\pea\docker\model\Book.class
+peep/pea/docker/model/Book.class
+peep/pea/docker/repository/BookRepository.class
+peep/pea/docker/DockerApplication.class
+peep/pea/docker/controller/HomeController.class
+peep/pea/docker/controller/BookController.class
