@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   books-db:
     image: mysql:8.0.37
@@ -21,6 +19,9 @@ services:
     depends_on:
       - books-db
     environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://peeppea.books-db:3306/peeppea_booksDB
+      SPRING_DATASOURCE_USERNAME: drew
+      SPRING_DATASOURCE_PASSWORD: peeppea33
       DB_HOST: peeppea.books-db
       DB_NAME: peeppea_booksDB
       DB_USERNAME: drew
