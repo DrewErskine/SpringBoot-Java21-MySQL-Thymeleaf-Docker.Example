@@ -33,37 +33,84 @@ A sophisticated book tracking application built with Spring Boot 3 and Java 21, 
 
 ## Technology Stack
 
-- **Java 21**
-- **Spring Boot 3.3.1**
-- **MySQL 8.3**
-- **Thymeleaf**
-- **Docker & Docker Compose**
-- **Maven**
+- **Java 21** - Latest LTS version with enhanced features
+- **Spring Boot 3.3.1** - Modern web application framework
+- **MySQL 8.3** - Robust database system
+- **Thymeleaf** - Server-side Java template engine
+- **Docker & Docker Compose** - Containerization and orchestration
+- **Maven** - Dependency management and build automation
 
 ## Project Structure
 
 ### Core Components
 
-#### 1. Book Entity (`Book.java`)
+#### 1. Controllers
+
+##### HomeController (`HomeController.java`)
+- **Endpoints**:
+  - `GET /`: Home page with search interface
+
+##### BookController (`BookController.java`)
+- **Endpoints**:
+  - `GET /books`: List all books
+  - `GET /books/{id}`: View book details
+  - `GET /books/add`: Display add book form
+  - `POST /books`: Create new book
+  - `GET /books/update/{id}`: Display update form
+  - `POST /books/update/{id}`: Update existing book
+
+#### 2. Models
+
+##### Book Entity (`Book.java`)
 - **Properties**:
-  - `id`: Long - Unique identifier
+  - `id`: Long - Unique identifier (Auto-generated)
   - `title`: String - Book title
   - `author`: String - Book author
-- **Methods**:
-  - Getters and setters for all properties
+- **JPA Annotations**:
+  - `@Entity`: Marks as JPA entity
+  - `@Id`: Primary key
+  - `@GeneratedValue`: Auto-increment strategy
 
-#### 2. Book Controller (`BookController.java`)
-- **Endpoints**:
-  - `GET /book/{id}`: Retrieve a specific book
-  - `GET /books`: List all books
-  - `GET /book/add`: Show add book form
-  - `POST /book/create`: Create new book
-  - `GET /book/update/{id}`: Show update form
-  - `POST /book/update/{id}`: Update existing book
+#### 3. Repository
 
-#### 3. Book Repository (`BookRepository.java`)
-- Extends `JpaRepository`
-- Provides database operations for Book entity
+##### BookRepository (`BookRepository.java`)
+- Extends `JpaRepository<Book, Long>`
+- Provides standard CRUD operations
+- Supports custom query methods
+
+### Frontend Assets
+
+#### CSS Styles
+- `accents.css`: Accent colors and highlights
+- `accessories.css`: UI component styles
+- `background.css`: Background styles
+- `darkmode.css`: Dark theme support
+
+#### JavaScript
+- `script.js`: Client-side functionality
+  - Search feature implementation
+  - Dynamic UI updates
+  - Form handling
+
+#### Templates
+- `index.html`: Home page with search
+- `list.html`: Book list view
+- `add.html`: Add book form
+- `bookDetail.html`: Detailed book view
+
+### Database Configuration
+
+#### SQL Scripts
+- `01-schema.sql`: Database schema definition
+- `02-data.sql`: Initial data population
+
+#### Properties
+```properties
+# Database Configuration
+spring.jpa.hibernate.ddl-auto=none
+spring.sql.init.mode=always
+spring.datasource.url=jdbc:mysql://${DB_HOST:localhost}:3306/${DB_NAME:peeppea_booksDB}
+```
 
 ## Getting Started
 
